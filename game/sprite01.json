@@ -35,10 +35,10 @@
 "meta": {
 	"app": "http://www.codeandweb.com/texturepacker",
 	"version": "1.0",
-	"image": "sprite.png",
+	"image": "sprite01.png",
 	"format": "RGBA8888",
 	"size": {"w":1008,"h":444},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:382a11f2ec9dd6c3ff6161322de41d5a:85fd7033951164cea00f68c9c9a53987:68d88b3cf7eafc9b5accfffdfb2fda91$"
+	"smartupdate": "$TexturePacker:SmartUpdate:36c7e5b2d3235dabd23e35190f846e0a:85fd7033951164cea00f68c9c9a53987:1308c4551bf43bde772563b7df194f86$"
 }
 }
