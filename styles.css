@@ -1,0 +1,34 @@
+@charset="UTF-8";
+
+/*Configuración del estilo del pie de página*/
+.footNote {
+  font-family: 'regular';
+  font-size: 20px;
+  border-style: solid;
+  border-color: white;
+  text-align: center;
+  text-shadow: 1px 1px #bfbc8d;
+  color: white;
+  width: 100%;
+  height: 100px;
+  bottom:0;
+  left:0;
+}
+
+/*Estilo pantallas grandes*/
+@media only screen and (min-width: 720px) {
+	.phaserDiv {	
+	    margin: auto;
+	    width: 720px;
+	} 
+}
+/*Estilo de las pantallas de dispositivos moviles*/
+@media only screen and (max-width: 720px) {
+	.content, .footer {
+		font-size: 13px;
+	}
+	.content {
+		width: auto;
+	}
+}
+	
