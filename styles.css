@@ -1,0 +1,156 @@
+@charset="UTF-8";
+
+/*Importación de fuentes */
+@font-face {
+  font-family: 'jedi';
+  src: url('src/fonts/Starjedi.ttf');
+}
+
+@font-face {
+  font-family: 'jedi_white';
+  src: url('src/fonts/SF Distant Galaxy Outline.ttf');
+}
+
+@font-face {
+  font-family: 'regular';
+  src: url('src/fonts/Gabriel Serif.ttf'); 
+}
+
+/*Configuración por defecto del cuerpo de la página*/
+body{
+  font-family: 'regular';
+  font-size: 20px;
+  text-shadow: 1px 1px black;
+  background-color: black;
+  color: white;
+}
+
+/*Configuración por defecto del los titulos*/
+h1 {
+  font-family: 'jedi_white';
+  font-size: 90px;
+  text-shadow: 4px 4px #b52d34;
+  text-align: center;
+}
+
+h2 {
+  color: #b52d34;
+  font-family: 'jedi';
+  font-size: 70px;
+  text-shadow: 3px 3px white;
+  text-align: center;
+}
+
+h3 {
+  font-family: 'jedi';
+  font-size: 50px;
+  text-shadow: 3px 2px black;
+  text-align: center;
+}
+
+p{
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+li{
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+
+
+/*Configuracion de la caja superior de todas las paginas*/
+.logo {
+  border-color: #5c605c;
+  border-style: solid;
+  border-radius: 50px;
+  background-image: url('src/img/fly_stuart.png');
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+  width: 100%;
+  height: 150px;
+  text-align: center;
+  border-radius: 50px 50px 50px 50px;
+}
+
+/*Contenedor de texto*/
+.textBoxContainer{
+  margin: auto;
+  border-style: inset;
+  border-color: white;
+  width: 80%;
+  background-color: #3d0307;
+  background-size: cover;
+  text-align: justify;
+}
+
+/*Contenedor para botones de navegacion*/
+.navBox {
+  min-width: 200px;
+  max-width: 100%;
+  margin: auto;
+}
+
+/*Configuracion del estilo de los botones*/
+.buttons{
+  color: #ffffff;
+  font-family: 'jedi';
+  font-size: 30px;
+  border-style: solid;
+  text-shadow: 3px 3px black;  
+  font-weight: bold;
+  text-align: center;
+  background-color: #3fa6ae;
+  background-position: left;
+  height: 75px;
+  padding:5px 10px 6px 8px;
+  border-radius: 50px;
+  min-width: 250px;
+  transition-duration: 0.4s;
+}
+
+/*Recuadro para presentación de imágenes */
+.imgContainer {
+  font-family: 'jedi';
+  margin: auto;
+  width: 800px;
+  height: 480px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
+/*Configuración del estilo del pie de página*/
+.footNote {
+  font-family: 'regular';
+  font-size: 20px;
+  border-style: solid;
+  border-color: white;
+  background-image: url(src/img/favicon.png);
+  text-align: center;
+  text-shadow: 1px 1px #bfbc8d;
+  color: white;
+  width: 100%;
+  height: 100px;
+  bottom:0;
+  left:0;
+}
+/*Estilo pantallas grandes*/
+@media only screen and (min-width: 720px) {
+	.phaserDiv {	
+	    margin: auto;
+	    width: 720px;
+	} 
+}
+/*Estilo de las pantallas de dispositivos moviles*/
+@media only screen and (max-width: 720px) {
+	.content, .footer {
+		font-size: 13px;
+	}
+	.content {
+		width: auto;
+	}
+}
+	

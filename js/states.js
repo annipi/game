@@ -1,5 +1,4 @@
-var game = new Phaser.Game(830, 380, Phaser.AUTO, 'flyGame');
-var fly;
+var game = new Phaser.Game(860, 389, Phaser.CANVAS, 'flyGame');
 
 game.state.add('menu', menuState);
 game.state.add('play', playState);
