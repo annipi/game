@@ -1,0 +1,44 @@
+{"frames": {
+
+"background.png":
+{
+	"frame": {"x":1,"y":1,"w":860,"h":389},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":860,"h":389},
+	"sourceSize": {"w":860,"h":389}
+},
+"fly/dead_fly.png":
+{
+	"frame": {"x":863,"y":149,"w":141,"h":146},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":13,"y":13,"w":141,"h":146},
+	"sourceSize": {"w":166,"h":172}
+},
+"fly/flying/fly01.png":
+{
+	"frame": {"x":863,"y":297,"w":141,"h":146},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":13,"y":13,"w":141,"h":146},
+	"sourceSize": {"w":166,"h":172}
+},
+"fly/flying/fly02.png":
+{
+	"frame": {"x":863,"y":1,"w":144,"h":146},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":10,"y":13,"w":144,"h":146},
+	"sourceSize": {"w":166,"h":172}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "sprite.png",
+	"format": "RGBA8888",
+	"size": {"w":1008,"h":444},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:382a11f2ec9dd6c3ff6161322de41d5a:85fd7033951164cea00f68c9c9a53987:68d88b3cf7eafc9b5accfffdfb2fda91$"
+}
+}
