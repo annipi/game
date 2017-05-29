@@ -1,22 +1,20 @@
 var bck;
-var dead_stuart;
 var stuart;
-var walls;
 var wall;
-var fireballs;
-var fireball;
-var time;
-var score;
+var level = 10;
+var time = 0;
+var winGame;
 
 var playState = {
+    /*Precarga los elementos a usar durante el juego*/
     preload: function() {
         game.load.spritesheet('sky_img', 'src/img/sky.png',852, 480);
         game.load.spritesheet('stuart_img', 'src/img/stuart.png',144,144);
         game.load.image('wall_img', 'src/img/wall.png');
         game.load.image('fire_img', 'src/img/fire.png');
-        game.load.image('stuart_dead', 'src/img/dead_stuart.png');
+        game.load.image('finish-img', 'src/img/finish.png');
     },
-
+    /*Crea todos los elementos que apareceran durante la partida*/
     create: function() {
         game.physics.startSystem(Phaser.Physics.ARCADE);
 
@@ -32,20 +30,11 @@ var playState = {
         stuart.body.checkCollision.up = true;
         stuart.body.checkCollision.down = true;
 
-        wall = game.add.sprite(800, 200, 'wall_img');
-        game.physics.enable(wall, Phaser.Physics.ARCADE);
-        wall.body.velocity.x = -200;
-        wall.body.checkCollision.right = true;
-        wall.body.checkCollision.left = true;
-        wall.body.checkCollision.up = true;
-        wall.body.checkCollision.down = true;
-        wall.lifespan = 7000;
+        game.time.events.repeat(game.rnd.integerInRange(3000, 5000),level, this.createWall, this);
+        game.time.events.add(game.rnd.integerInRange(28000, 30000), this.createFinish, this);
 
-        //botones de movimiento
+        /*Inicializa los controles del juego*/
         keys = game.input.keyboard.createCursorKeys();
-
-        //configuración dpara disparo de poderes
-        fireBtn = game.input.keyboard.addKey(Phaser.Keyboard.Q);
     },
 
     update: function () {
@@ -65,24 +54,49 @@ var playState = {
             if(keys.left.isDown && stuart.x >= 0){
                 stuart.position.x -= 3;
             }
-        }else{
-
         }
-        game.physics.arcade.overlap(stuart, wall,destroy);
-        //game.physics.arcade.overlap(fireballs, walls, destroy, null, this);
+        game.physics.arcade.overlap(stuart, wall,this.die);
+        game.physics.arcade.overlap(stuart, winGame,this.win);
 
     },
 
     render: function(){
         time = this.game.time.totalElapsedSeconds()|0;
         game.debug.text('SCORE: ' + time , 700, 32);
+    },
+
+    /*Esta funcion crea la meta o objetivo que debe alcanzar stuart(nuestro protagonsita) para ganar*/
+    createFinish: function(){
+        winGame = game.add.sprite(857,0,'finish-img');
+        game.physics.enable(winGame, Phaser.Physics.ARCADE);
+        winGame.body.collideWorldBounds = true;
+        winGame.body.checkCollision.right = true;
+        winGame.body.checkCollision.left = true;
+        winGame.body.checkCollision.up = true;
+        winGame.body.checkCollision.down = true;
+    },
+
+    /*Esta funcion permite crear paredes, que son los obstaculos a evitar por stuart(nuestro protagonista)*/
+    createWall: function(){
+        wall = game.add.sprite(857, game.rnd.integerInRange(0,336), 'wall_img');
+        game.physics.enable(wall, Phaser.Physics.ARCADE);
+        wall.body.checkCollision.right = true;
+        wall.body.checkCollision.left = true;
+        wall.body.checkCollision.up = true;
+        wall.body.checkCollision.down = true;
+        wall.body.velocity.x = -200;
+        wall.lifespan = 6000;
+    },
+
+    /*Esta funcion permite pasar al estado de juego Ganado*/
+    win: function(){
+        game.state.start('win');
+    },
+
+    /*Esta funcion permite pasar al estado de juego Perdido*/
+    die: function(){
+        stuart.kill();
+        stuart.alive = false;
+        game.state.start('gameOver');
     }
 };
-
-//función para colision contra paredes
-function destroy(){
-   stuart.kill();
-   //alert("Un minuto de silecio has matado a Stuart :'(");
-   stuart.alive = false;
-   game.state.start('gameOver');
-}
