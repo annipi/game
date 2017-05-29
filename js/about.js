@@ -1,4 +1,5 @@
 var aboutState = {
+    /*Precarga los elementos a usar durante este estado del juego*/
     preload: function() {
         game.load.image('abt1', 'src/img/about1.png');
         game.load.image('abt2', 'src/img/about2.png');
@@ -6,7 +7,7 @@ var aboutState = {
         game.load.image('menu-btn', 'src/img/menu.png');
     },
 
-    //pantalla incial en la que muestra las opciones previas al juego
+    /*Crea todos los elementos que apareceran durante este estado del juego*/
     create: function() {
         game.add.tileSprite(0,0,835,532,'abt1');
         //Botones para ver mas acerca de y para regresar al menu

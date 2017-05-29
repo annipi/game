@@ -1,4 +1,5 @@
 var creditsState = {
+    /*Precarga los elementos a usar durante este estado del juego*/
     preload: function() {
         game.load.image('cred1', 'src/img/credit1.png');
         game.load.image('cred2', 'src/img/credit2.png');
@@ -7,18 +8,12 @@ var creditsState = {
         game.load.image('github-btn', 'src/img/github.png');
     },
 
-    //pantalla incial en la que muestra las opciones previas al juego
+    /*Crea todos los elementos que apareceran durante este estado del juego*/
     create: function() {
         game.add.tileSprite(0,0,835,532,'cred1');
         //Botones para ver mas acerca de y para regresar al menu
         this.add.button( 610, 190, 'next-btn', this.next, this );
         this.add.button( 300, 350, 'github-btn', this.git, this );
-        // baseurl="http://www.facebook.com?"
-        // function buildURL(item)
-        // {
-        //     item.href=baseurl+window.location.href;
-        //     return true;
-        // }
     },
 
     //Abre nueva ventana hacia el repositorio en github
@@ -31,7 +26,7 @@ var creditsState = {
         this.state.start('menu');
     },
 
-    //Se muestra mas acerca del juego
+    //Se muestra mas sobre los creditos del juego
     next: function(){
         game.add.tileSprite(0,0,835,532,'cred2');
         this.add.button( 610, 190, 'menu-btn', this.backMenu, this );

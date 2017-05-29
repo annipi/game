@@ -1,4 +1,5 @@
 var menuState = {
+    /*Precarga los elementos a usar durante este estado del juego*/
     preload: function() {
         game.load.image('back', 'src/img/background.png');
         game.load.image('play-btn', 'src/img/play-button.png');
@@ -6,6 +7,7 @@ var menuState = {
         game.load.image('credits', 'src/img/credits-btn.png');
     },
 
+    /*Crea todos los elementos que apareceran durante este estado del juego*/
     create: function() {
         game.add.tileSprite(0,0,835,532,'back');
         //se agrega un botón que da paso a iniciar el juego

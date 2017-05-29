@@ -1,4 +1,5 @@
 var gameOverState = {
+    /*Precarga los elementos a usar durante este estado del juego*/
     preload: function () {
         game.load.image('back', 'src/img/background.png');
         game.load.image('stuart-dead','src/img/dead_stuart.png');
@@ -8,6 +9,7 @@ var gameOverState = {
         game.load.image('menu-btn', 'src/img/menu.png');
     },
 
+    /*Crea todos los elementos que apareceran durante este estado del juego*/
     create: function() {
         game.add.tileSprite(0,0,835,532,'back');
         game.add.sprite(70, 20, 'msg');
@@ -16,6 +18,7 @@ var gameOverState = {
         this.add.button( 60, 200, 'replay-btn', this.startGame, this );
         this.add.button( 250, 200, 'menu-btn', this.backMenu, this );
         time = game.time.totalElapsedSeconds()|0;
+        //Muestra el puntaje (que son el numero de segundo que stuart se mantuvo vivo) en la lapida de stuart
         game.add.text(680, 335,''+time, { font: "16px Courier New", fill: "#3f4253"} );
     },
 
