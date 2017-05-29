@@ -32,6 +32,11 @@ var playState = {
         stuart.body.checkCollision.up = true;
         stuart.body.checkCollision.down = true;
 
+        wall = game.add.sprite(800, 200, 'wall_img');
+        game.physics.enable(wall, Phaser.Physics.ARCADE);
+        wall.body.velocity.x = -200;
+        wall.lifespan = 7000;
+
         //botones de movimiento
         keys = game.input.keyboard.createCursorKeys();
 
