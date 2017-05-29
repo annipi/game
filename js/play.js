@@ -35,6 +35,10 @@ var playState = {
         wall = game.add.sprite(800, 200, 'wall_img');
         game.physics.enable(wall, Phaser.Physics.ARCADE);
         wall.body.velocity.x = -200;
+        wall.body.checkCollision.right = true;
+        wall.body.checkCollision.left = true;
+        wall.body.checkCollision.up = true;
+        wall.body.checkCollision.down = true;
         wall.lifespan = 7000;
 
         //botones de movimiento
@@ -61,8 +65,10 @@ var playState = {
             if(keys.left.isDown && stuart.x > 0){
                 stuart.position.x -= 3;
             }
+        }else{
+
         }
-        game.physics.arcade.collide(stuart, wall);
+        game.physics.arcade.overlap(stuart, wall,destroy);
         //game.physics.arcade.overlap(fireballs, walls, destroy, null, this);
 
     },
@@ -82,7 +88,7 @@ var playState = {
 };
 
 //función para colision bolas de fuego contra paredes
-//function destroy(fireball, wall){
-//    wall.kill();
-//    fireball.kill();
-//}
+function destroy(stuart, wall){
+   stuart.kill();
+   game.state.start('menu');
+}
