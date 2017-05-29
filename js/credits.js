@@ -4,6 +4,7 @@ var creditsState = {
         game.load.image('cred2', 'src/img/credit2.png');
         game.load.image('next-btn', 'src/img/next.png');
         game.load.image('menu-btn', 'src/img/menu.png');
+        game.load.image('github-btn', 'src/img/github.png');
     },
 
     //pantalla incial en la que muestra las opciones previas al juego
@@ -11,6 +12,18 @@ var creditsState = {
         game.add.tileSprite(0,0,835,532,'cred1');
         //Botones para ver mas acerca de y para regresar al menu
         this.add.button( 610, 190, 'next-btn', this.next, this );
+        this.add.button( 300, 350, 'github-btn', this.git, this );
+        // baseurl="http://www.facebook.com?"
+        // function buildURL(item)
+        // {
+        //     item.href=baseurl+window.location.href;
+        //     return true;
+        // }
+    },
+
+    //Abre nueva ventana hacia el repositorio en github
+    git: function(){
+        window.open("https://github.com/annipi/game", "_blank");
     },
 
     //Se regresa al estado de menu
