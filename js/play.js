@@ -56,13 +56,13 @@ var playState = {
             if(keys.up.isDown && stuart.y < 480){
                 stuart.position.y -= 3;
             }
-            if(keys.down.isDown && stuart.y > 0){
+            if(keys.down.isDown && stuart.y >= 0){
                 stuart.position.y += 3;
             }
             if(keys.right.isDown && stuart.x < 857){
                 stuart.position.x += 3;
             }
-            if(keys.left.isDown && stuart.x > 0){
+            if(keys.left.isDown && stuart.x >= 0){
                 stuart.position.x -= 3;
             }
         }else{
@@ -73,22 +73,16 @@ var playState = {
 
     },
 
-    //función para muerte por colision contra paredes
-    //smashWall: function(){
-    //    if( !stuart.alive ){return;}
-    //    alert("Un minuto de silecio has matado a Stuart :'(");
-    //    stuart.alive = false;
-    //    this.state.start('Menu');
-    //},
-
     render: function(){
         time = this.game.time.totalElapsedSeconds()|0;
-        score = game.debug.text('SCORE: ' + time , 700, 32);
+        game.debug.text('SCORE: ' + time , 700, 32);
     }
 };
 
-//función para colision bolas de fuego contra paredes
-function destroy(stuart, wall){
+//función para colision contra paredes
+function destroy(){
    stuart.kill();
-   game.state.start('menu');
+   //alert("Un minuto de silecio has matado a Stuart :'(");
+   stuart.alive = false;
+   game.state.start('gameOver');
 }

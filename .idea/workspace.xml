@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ddcb627-a051-40da-b44b-f5feecb168a4" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/game_over.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/img/wall.png" afterPath="$PROJECT_DIR$/src/img/wall.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/play.js" afterPath="$PROJECT_DIR$/js/play.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/states.js" afterPath="$PROJECT_DIR$/js/states.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,18 +26,18 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="45" lean-forward="true" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+            <state relative-caret-position="238">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="play.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="play.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/play.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="92" column="21" lean-forward="true" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="25" />
+            <state relative-caret-position="303">
+              <caret line="76" column="8" lean-forward="false" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -40,8 +46,18 @@
       <file leaf-file-name="states.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/states.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="25" />
+            <state relative-caret-position="0">
+              <caret line="0" column="30" lean-forward="false" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="game_over.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/game_over.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -50,8 +66,8 @@
       <file leaf-file-name="menu.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/menu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+            <state relative-caret-position="153">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -74,11 +90,12 @@
       <list>
         <option value="$PROJECT_DIR$/js/controls.js" />
         <option value="$PROJECT_DIR$/js/menu.js" />
-        <option value="$PROJECT_DIR$/js/states.js" />
         <option value="$PROJECT_DIR$/about.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/styles.css" />
+        <option value="$PROJECT_DIR$/js/states.js" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/play.js" />
+        <option value="$PROJECT_DIR$/js/game_over.js" />
       </list>
     </option>
   </component>
@@ -304,12 +321,12 @@
       <updated>1495915352973</updated>
       <workItem from="1495915357050" duration="16522000" />
       <workItem from="1495994267799" duration="6874000" />
-      <workItem from="1496015657030" duration="2516000" />
+      <workItem from="1496015657030" duration="8670000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25912000" />
+    <option name="totallyTimeSpent" value="32066000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -477,14 +494,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/phaser.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="88960" column="75" lean-forward="false" selection-start-line="88960" selection-start-column="75" selection-end-line="88960" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/controls.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -493,34 +502,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/menu.js">
+    <entry file="file://$PROJECT_DIR$/js/states.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        <state relative-caret-position="0">
+          <caret line="0" column="30" lean-forward="false" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phaser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="57204" column="0" lean-forward="false" selection-start-line="57204" selection-start-column="0" selection-end-line="57204" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="45" lean-forward="true" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/states.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="25" />
+        <state relative-caret-position="238">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/play.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="92" column="21" lean-forward="true" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="25" />
+        <state relative-caret-position="303">
+          <caret line="76" column="8" lean-forward="false" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/game_over.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
           <folding />
         </state>
       </provider>
